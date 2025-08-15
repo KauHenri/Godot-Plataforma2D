@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Arquivos e pastas que a Godot recria sozinha
+.import/
+export.cfg
+export_presets.cfg
+.project_metadata/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db

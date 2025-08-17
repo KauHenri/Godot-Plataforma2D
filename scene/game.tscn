@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqitwv70v6af8" path="res://entities/player.tscn" id="1_5kiuu"]
 [ext_resource type="TileSet" uid="uid://c225eldtdllg0" path="res://tiles/terrain.tres" id="2_33cqm"]
-[ext_resource type="TileSet" uid="uid://d3ywctlonvfjp" path="res://scene/decoration.tres" id="3_xwcet"]
+[ext_resource type="TileSet" uid="uid://cyldb3jgqu7te" path="res://tiles/decoration.tres" id="3_33cqm"]
 
 [node name="Game" type="Node2D"]
 
@@ -17,4 +17,4 @@ tile_set = ExtResource("2_33cqm")
 
 [node name="Decoration" type="TileMapLayer" parent="Tiles"]
 tile_map_data = PackedByteArray("AAAEAAkAAAAJAAEAAAAFAAoAAAADAAUAAAACAAoAAAABAAUAAAAHAAgAAAAFAAUAAAAIAAgAAAAGAAUAAAAJAAgAAAAGAAUAAAAKAAgAAAAGAAUAAAALAAgAAAAGAAUAAAAMAAgAAAAHAAUAAAAOAAcAAAABAAEAAAAPAAgAAAABAAUAAAASAAYAAgAAAAAAAAASAAgAAAABAAUAAAAVAAcAAAABAAEAAAA=")
-tile_set = ExtResource("3_xwcet")
+tile_set = ExtResource("3_33cqm")

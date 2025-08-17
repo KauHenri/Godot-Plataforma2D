@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://d3ywctlonvfjp"]
+[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://cyldb3jgqu7te"]
 
 [ext_resource type="Texture2D" uid="uid://bfgg3f6jc2p8p" path="res://sprites/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="1_afwjg"]
 [ext_resource type="Texture2D" uid="uid://pgviv70nx580" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/Flowers (16 x 16).png" id="2_tn637"]
@@ -7,8 +7,6 @@
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_opncr"]
 tile_data = PackedInt32Array(0, 65536, 1, 65537, 65536, 5)
-
-[sub_resource type="TileMapPattern" id="TileMapPattern_hs4kn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ll5lq"]
 texture = ExtResource("1_afwjg")
@@ -97,4 +95,3 @@ sources/1 = SubResource("TileSetAtlasSource_17rxn")
 sources/2 = SubResource("TileSetAtlasSource_yq8tf")
 sources/4 = SubResource("TileSetAtlasSource_k4wys")
 pattern_0 = SubResource("TileMapPattern_opncr")
-pattern_1 = SubResource("TileMapPattern_hs4kn")

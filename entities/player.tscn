@@ -119,12 +119,12 @@ visible = false
 shape = SubResource("CapsuleShape2D_ypkcv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_i623q")
 animation = &"jump"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
-limit_top = 0
 limit_bottom = 200
 position_smoothing_enabled = true

@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://ccnad18chqia5"]
+
+[ext_resource type="Texture2D" uid="uid://cgslm4avfp2un" path="res://sprites/UIpackSheet_transparent.png" id="1_lithe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_71brg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vidkg"]
+atlas = ExtResource("1_lithe")
+region = Rect2(364, 470, 8, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lithe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p23d"]
+atlas = ExtResource("1_lithe")
+region = Rect2(382, 470, 8, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vidkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e52dr"]
+atlas = ExtResource("1_lithe")
+region = Rect2(362, 454, 12, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1p23d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37pad"]
+atlas = ExtResource("1_lithe")
+region = Rect2(380, 454, 12, 8)
+
+[node name="buttons" type="CanvasLayer"]
+
+[node name="left_button" type="TouchScreenButton" parent="."]
+position = Vector2(33, 175)
+scale = Vector2(1.6, 1.6)
+shape = SubResource("CircleShape2D_71brg")
+action = "left"
+
+[node name="Sprite2D" type="Sprite2D" parent="left_button"]
+position = Vector2(-1.875, 0)
+scale = Vector2(1.885, 1.385)
+texture = SubResource("AtlasTexture_vidkg")
+
+[node name="right_button" type="TouchScreenButton" parent="."]
+position = Vector2(71, 175)
+scale = Vector2(1.625, 1.6)
+shape = SubResource("CircleShape2D_lithe")
+action = "right"
+
+[node name="Sprite2D" type="Sprite2D" parent="right_button"]
+position = Vector2(1.84615, 0.624998)
+scale = Vector2(1.88461, 1.38542)
+texture = SubResource("AtlasTexture_1p23d")
+
+[node name="jump_button" type="TouchScreenButton" parent="."]
+position = Vector2(353, 148)
+scale = Vector2(1.6, 1.6)
+shape = SubResource("CircleShape2D_vidkg")
+action = "jump"
+
+[node name="Sprite2D" type="Sprite2D" parent="jump_button"]
+position = Vector2(0, -1.875)
+scale = Vector2(1.385, 1.885)
+texture = SubResource("AtlasTexture_e52dr")
+
+[node name="duck_button" type="TouchScreenButton" parent="."]
+position = Vector2(353, 184)
+scale = Vector2(1.6, 1.6)
+shape = SubResource("CircleShape2D_1p23d")
+action = "duck"
+
+[node name="Sprite2D" type="Sprite2D" parent="duck_button"]
+position = Vector2(-1.90735e-05, 1.875)
+scale = Vector2(1.385, 1.885)
+texture = SubResource("AtlasTexture_37pad")

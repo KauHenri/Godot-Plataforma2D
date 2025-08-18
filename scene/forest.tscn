@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cwd3fc0tanrmk"]
+[gd_scene load_steps=17 format=4 uid="uid://cwd3fc0tanrmk"]
 
 [ext_resource type="PackedScene" uid="uid://cqitwv70v6af8" path="res://entities/player.tscn" id="1_e2knd"]
 [ext_resource type="TileSet" uid="uid://c225eldtdllg0" path="res://tiles/terrain.tres" id="2_2xpkg"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b4m6rogu71sp6" path="res://entities/camera.tscn" id="9_jo4av"]
 [ext_resource type="TileSet" uid="uid://cyldb3jgqu7te" path="res://tiles/decoration.tres" id="11_64es3"]
 [ext_resource type="PackedScene" uid="uid://qbvckoj7tv4q" path="res://entities/level_end.tscn" id="12_64es3"]
+[ext_resource type="PackedScene" uid="uid://ccnad18chqia5" path="res://entities/buttons.tscn" id="13_kmspj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwku7"]
 texture = ExtResource("3_jxvlp")
@@ -160,5 +161,8 @@ next_level = "tropic"
 [node name="CollisionShape2D" parent="LevelEnd" index="0"]
 position = Vector2(0, -86)
 shape = SubResource("RectangleShape2D_kmspj")
+
+[node name="buttons" parent="." instance=ExtResource("13_kmspj")]
+visible = false
 
 [editable path="LevelEnd"]

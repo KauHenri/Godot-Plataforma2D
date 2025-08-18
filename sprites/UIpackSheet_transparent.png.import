@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfk38svvk07so"
-path="res://.godot/imported/Belly_Sliding (16 x 16).png-131d913c20d930875408c1b736d0672e.ctex"
+uid="uid://cgslm4avfp2un"
+path="res://.godot/imported/UIpackSheet_transparent.png-6921c1f5258f2a33e28fdf807b7ba3fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Penguin/Belly_Sliding (16 x 16).png"
-dest_files=["res://.godot/imported/Belly_Sliding (16 x 16).png-131d913c20d930875408c1b736d0672e.ctex"]
+source_file="res://sprites/UIpackSheet_transparent.png"
+dest_files=["res://.godot/imported/UIpackSheet_transparent.png-6921c1f5258f2a33e28fdf807b7ba3fa.ctex"]
 
 [params]
 

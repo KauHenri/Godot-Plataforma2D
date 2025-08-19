@@ -6,11 +6,13 @@ enum PlayerState{
 	jump,
 	fall,
 	duck,
-	slide
+	slide,
+	dead
 }
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var reload_timer: Timer = $ReloadTimer
 
 @export var max_speed = 150.0
 @export var acceleration = 400
@@ -46,6 +48,8 @@ func _physics_process(delta: float) -> void:
 			duck_state(delta)
 		PlayerState.slide:
 			slide_state(delta)
+		PlayerState.dead:
+			dead_state(delta)
 
 	move_and_slide()
 
@@ -82,6 +86,12 @@ func go_to_slide_state():
 
 func exit_from_slide_state():
 	set_large_collider()
+
+func go_to_dead_state():
+	status = PlayerState.dead
+	anim.play("dead")
+	velocity = Vector2.ZERO
+	reload_timer.start()
 
 func idle_state(delta):
 	move(delta)
@@ -162,6 +172,9 @@ func slide_state(delta):
 		go_to_duck_state()
 		return
 
+func dead_state(_delta):
+	pass
+
 func move(delta):
 	update_direction()
 	
@@ -191,3 +204,16 @@ func set_large_collider():
 	collision_shape.shape.radius = 6
 	collision_shape.shape.height = 16
 	collision_shape.position.y = 0
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if velocity.y > 0:
+		# inimigo morre
+		area.get_parent().take_damage()
+		go_to_jump_state()
+	else:
+		# player morre
+		if status != PlayerState.dead:
+			go_to_dead_state()
+
+func _on_reload_timer_timeout() -> void:
+	get_tree().reload_current_scene()

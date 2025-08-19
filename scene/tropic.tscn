@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bjdq6qccoxmmt"]
+[gd_scene load_steps=15 format=4 uid="uid://bjdq6qccoxmmt"]
 
 [ext_resource type="PackedScene" uid="uid://cqitwv70v6af8" path="res://entities/player.tscn" id="1_bmxgx"]
 [ext_resource type="TileSet" uid="uid://c225eldtdllg0" path="res://tiles/terrain.tres" id="2_ry6l7"]
@@ -11,6 +11,7 @@
 [ext_resource type="TileSet" uid="uid://cyldb3jgqu7te" path="res://tiles/decoration.tres" id="9_d18o5"]
 [ext_resource type="PackedScene" uid="uid://qbvckoj7tv4q" path="res://entities/level_end.tscn" id="10_d18o5"]
 [ext_resource type="PackedScene" uid="uid://ccnad18chqia5" path="res://entities/buttons.tscn" id="11_t8vtq"]
+[ext_resource type="PackedScene" uid="uid://b83wy72uhr47y" path="res://entities/skeleton.tscn" id="12_ei81g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ytc0w"]
 animations = [{
@@ -93,6 +94,9 @@ frame = 1
 frame_progress = 0.62981
 centered = false
 
+[node name="buttons" parent="." instance=ExtResource("11_t8vtq")]
+visible = false
+
 [node name="TileMaps" type="Node" parent="."]
 
 [node name="Terrain" type="TileMapLayer" parent="TileMaps"]
@@ -111,7 +115,7 @@ next_level = "forest"
 position = Vector2(2, -69)
 shape = SubResource("RectangleShape2D_t8vtq")
 
-[node name="buttons" parent="." instance=ExtResource("11_t8vtq")]
-visible = false
+[node name="Skeleton" parent="." instance=ExtResource("12_ei81g")]
+position = Vector2(73, 160)
 
 [editable path="LevelEnd"]
